@@ -8,6 +8,8 @@ function init() {
   const button = document.querySelector('button');
   const volumeCtrl = document.querySelector('input');
 
+  const jsConfetti = new JSConfetti();
+
   horns.addEventListener('change', (event) => {
     const hornChoice = horns.value;
 
@@ -26,6 +28,7 @@ function init() {
         console.log('Party Horn');
         document.querySelector('img[alt="No image selected"]').src = 'assets/images/party-horn.svg';
         document.getElementsByClassName('hidden').src = 'assets/audio/party-horn.mp3';
+        jsConfetti.addConfetti();
         break;
     }
 
